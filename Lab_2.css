@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to left, rgb(124, 238, 241), rgb(221, 234, 236), rgb(124, 238, 241));
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header {
+    filter: drop-shadow(0 0 15px #0CC8C8);
+    font-family: "Yeseva One";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 4.5vw;
+}
+
+#conteiner-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0CC8C8;
+    width: 54.688vw;
+    border-radius: 0 0 50px 0;
+    height: 6vw;
+}
+
+#conteiner-title h1 {
+    font-size: 2vw;
+}
+
+.open_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0CC8C8;
+    border: none;
+    font-family: "Yeseva One";
+    color: white;
+    font-size: 1.4vw;
+    border-radius: 0 0 0 50px;
+    width: 7vw;
+    height: 6vw;
+}
+.open_login:hover {
+    color: #0CC8C8;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+
+.open_register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0CC8C8;
+    border: none;
+    font-family: "Yeseva One";
+    color: white;
+    border-radius: 0 0 50px 50px;
+    font-size: 1.4vw;
+    width: 18vw;
+    height: 6vw;
+}
+.open_register:hover {
+    color: #0CC8C8;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+
+#ellips {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #0CC8C8;
+    text-align: center;
+    vertical-align: middle;
+    height: 37vw;
+    width: 37vw;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px #0CC8C8);
+    font-family: "Yeseva One";
+    color: white;
+}
+
+#ellips h1 {
+    margin-top: 13vw;
+    font-size: 5vw;
+    filter: drop-shadow(0 0 15px white);
+}
+
+#next_button {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #0CC8C8;
+    text-align: center;
+    vertical-align: middle;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px #0CC8C8);
+    padding-top: 7vw;
+    font-family: "Yeseva One";
+    color: white;
+    cursor: pointer;
+}
+
+#detailed_h1 {
+    font-size: 5vw;
+    filter: drop-shadow(0 0 15px white);
+    text-align: center;
+    margin-left: 0 auto;
+    color: white;
+}
+
+footer {
+    filter: drop-shadow(0 0 15px #0CC8C8);
+    font-family: "Yeseva One";
+    display: flex;
+    justify-content: end;
+    margin-top: 4.5vw;
+}
+
+#conteiner-footer {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #0CC8C8;
+    width: 54.688vw;
+    border-radius: 50px 0 0 0;
+    height: 6.5vw;
+    font-size: 1.4vw;
+}
+
+.form_register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.container_registration {
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 5px;
+    width: 320px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.container_registration h1 {
+    margin: 0, auto;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+
+.container_registration input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+}
+
+
+.container_registration .checkbox input{
+    margin-left: -145px;
+    float:left;
+}
+
+.container_registration .checkbox label {
+    font-size: 13px;
+    padding-right: 50px;
+}
+
+.reg {
+    margin-left: 55px;
+}
+
+.container_registration .reg {
+    margin-bottom: 10px;
+}
+
+.form_login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.container_login {
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 5px;
+    width: 320px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.container_login h1 {
+    margin: 0, auto;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+
+.container_login input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+}
+
+.log {
+    margin-left:100px;
+}
+
+.container_login .log {
+    margin-bottom: 10px;
+}
+

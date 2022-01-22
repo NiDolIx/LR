@@ -10,6 +10,14 @@
     } catch (PDOException $e) {
         echo "Database error: " . $e->getMessage();
     }
+
+session_start();
+
+$mes = "";
+if(isset($_SESSION['name']))
+{
+$mes = "привет," . $_SESSION['name'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +32,7 @@
     <body> <!-- Разметка главной странички сайта -->
         <header>
             <div id = "conteiner-title">
-                <h1>Студенческий файлообменник</h1>
+                <h1>Студенческий файлообменник <?= $mes?></h1>
             </div>
     
             <button href = "#R" class = "open_register" onclick = "openReg()">Зарегистрироваться</button> 
@@ -32,7 +40,7 @@
         </header>  
 
         <div class = "main" id="main_container">
-            <?php foreach ($result as $row) : ?>
+            <?php foreach($result as $row): ?>
             <div id = "ellips">
                 <a href="detailed.php?id=<?=$row['id']?>">
                     <h1><?=$row['title']?></h1>
@@ -98,7 +106,7 @@
 
                 <div class="password_reg_relod">
                     <label for="password"><b>Повторите пароль</b></label>
-                    <input type="password" class = "password_relod_form fields" placeholder = "Пароль" name = "password" required>   
+                    <input type="password" class = "password_relod_form fields" placeholder = "Пароль"  required>   
                 </div>
                 
                 <div class="email">
@@ -108,7 +116,7 @@
 
                 <div class="telephone">
                     <label for="telephone"><b>Телефон</b></label>
-                    <input type="text" class = "telephone_form fields" placeholder = "Телефон" name = "telephone" required>
+                    <input type="text" class = "telephone_form fields" placeholder = "Телефон" name = "phone" required>
                 </div>
 
                 <div class="checkbox">
@@ -133,6 +141,7 @@
                 document.getElementById("L").style.display = "none";
             }
         </script>
+
         
         <!-- Окно авторизации -->
         <div class="form_login" id="L"> 

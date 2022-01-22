@@ -49,6 +49,24 @@ form_1.addEventListener('submit', function (event) {
   console.log("form: ", password_form.value)
   console.log("form: ", email_form.value)
   console.log("form: ", telephone_form.value)
+
+
+
+  let registerForm = new FormData(form_1);
+    fetch('register.php', {
+     method: 'POST',
+     body: registerForm
+  }
+)
+.then(response => response.json())
+.then((result) => {
+  if (result.errors) {
+     alert(result.errors);
+  } else {
+    document.location.reload();
+  }
+})
+.catch(error => console.log(error));
 })
 
 
@@ -76,4 +94,20 @@ form_2.addEventListener('submit', function (event) {
   // Вывод полей в консоль
   console.log("form: ", name_form_2.value)
   console.log("form: ", password_form_2.value)
+
+  let registerForm = new FormData(form_2);
+    fetch('login.php', {
+     method: 'POST',
+     body: registerForm
+  }
+)
+.then(response => response.json())
+.then((result) => {
+  if (result.errors) {
+     alert(result.errors);
+  } else {
+    document.location.reload();
+  }
+})
+.catch(error => console.log(error));
 })
